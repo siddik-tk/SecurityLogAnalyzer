@@ -1,0 +1,64 @@
+Feb 28 08:15:22 server01 sshd[12345]: Failed password for invalid user admin from 192.168.1.10 port 54321 ssh2
+Feb 28 08:15:25 server01 sshd[12345]: Failed password for root from 192.168.1.10 port 54322 ssh2
+Feb 28 08:17:01 server01 CRON[12400]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb 28 08:17:01 server01 CRON[12400]: pam_unix(cron:session): session closed for user root
+Feb 28 08:20:11 server01 sshd[12450]: Accepted password for johndoe from 192.168.1.15 port 49876 ssh2
+Feb 28 08:21:30 server01 sudo: johndoe : TTY=pts/0 ; PWD=/home/johndoe ; USER=root ; COMMAND=/usr/bin/apt update
+Feb 28 08:21:30 server01 sudo: pam_unix(sudo:session): session opened for user root by johndoe(uid=0)
+Feb 28 08:21:35 server01 sudo: pam_unix(sudo:session): session closed for user root
+Feb 28 08:25:44 server01 sshd[12510]: Failed password for invalid user test from 10.0.0.1 port 33210 ssh2
+Feb 28 08:25:47 server01 sshd[12510]: Failed password for invalid user guest from 10.0.0.1 port 33211 ssh2
+Feb 28 08:30:22 server01 sshd[12580]: Failed password for johndoe from 192.168.1.10 port 45123 ssh2
+Feb 28 08:31:05 server01 sshd[12602]: Accepted publickey for alice from 172.16.0.5 port 60011 ssh2
+Feb 28 08:35:12 server01 sudo: alice : TTY=pts/1 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Feb 28 08:40:33 server01 sshd[12701]: Failed password for invalid user oracle from 203.0.113.20 port 55678 ssh2
+Feb 28 08:40:35 server01 sshd[12701]: Failed password for invalid user db2inst1 from 203.0.113.20 port 55679 ssh2
+Feb 28 08:40:37 server01 sshd[12701]: Failed password for root from 203.0.113.20 port 55680 ssh2
+Feb 28 08:45:19 server01 sshd[12811]: Accepted password for bob from 192.168.1.100 port 48901 ssh2
+Feb 28 08:50:02 server01 CRON[12890]: pam_unix(cron:session): session opened for user www-data by (uid=0)
+Feb 28 08:50:02 server01 CRON[12890]: pam_unix(cron:session): session closed for user www-data
+Feb 28 08:55:44 server01 sshd[12933]: Failed password for invalid user pi from 203.0.113.20 port 44567 ssh2
+Feb 28 08:55:46 server01 sshd[12933]: Failed password for invalid user raspberry from 203.0.113.20 port 44568 ssh2
+Feb 28 08:55:48 server01 sshd[12933]: Failed password for invalid user ubuntu from 203.0.113.20 port 44569 ssh2
+Feb 28 09:00:10 server01 sshd[13002]: Accepted password for charlie from 8.8.8.8 port 55432 ssh2
+Feb 28 09:05:22 server01 sshd[13077]: Failed password for invalid user nagios from 45.67.89.12 port 33221 ssh2
+Feb 28 09:05:24 server01 sshd[13077]: Failed password for invalid user zabbix from 45.67.89.12 port 33222 ssh2
+Feb 28 09:05:26 server01 sshd[13077]: Failed password for invalid user tomcat from 45.67.89.12 port 33223 ssh2
+Feb 28 09:05:28 server01 sshd[13077]: Failed password for invalid user jenkins from 45.67.89.12 port 33224 ssh2
+Feb 28 09:10:45 server01 sshd[13150]: Accepted password for david from 192.168.10.5 port 60012 ssh2
+Feb 28 09:15:30 server01 sshd[13220]: Failed password for invalid user oracle from 111.22.33.44 port 49871 ssh2
+Feb 28 09:15:32 server01 sshd[13220]: Failed password for invalid user weblogic from 111.22.33.44 port 49872 ssh2
+Feb 28 09:15:34 server01 sshd[13220]: Failed password for invalid user admin from 111.22.33.44 port 49873 ssh2
+Feb 28 09:20:03 server01 sshd[13301]: Accepted password for eve from 172.20.10.8 port 33654 ssh2
+Feb 28 09:25:17 server01 sshd[13378]: Failed password for invalid user git from 99.88.77.66 port 22109 ssh2
+Feb 28 09:25:19 server01 sshd[13378]: Failed password for invalid user svn from 99.88.77.66 port 22110 ssh2
+Feb 28 09:25:21 server01 sshd[13378]: Failed password for invalid user ansible from 99.88.77.66 port 22111 ssh2
+Feb 28 09:25:23 server01 sshd[13378]: Failed password for invalid user chef from 99.88.77.66 port 22112 ssh2
+Feb 28 09:25:25 server01 sshd[13378]: Failed password for invalid user puppet from 99.88.77.66 port 22113 ssh2
+Feb 28 09:30:55 server01 sshd[13466]: Accepted password for frank from 10.10.10.10 port 44321 ssh2
+Feb 28 09:35:12 server01 sshd[13533]: Failed password for invalid user mongodb from 150.10.10.1 port 33987 ssh2
+Feb 28 09:35:14 server01 sshd[13533]: Failed password for invalid user redis from 150.10.10.1 port 33988 ssh2
+Feb 28 09:40:28 server01 sshd[13612]: Accepted publickey for grace from 172.31.255.1 port 55643 ssh2
+Feb 28 09:45:33 server01 sshd[13690]: Failed password for invalid user docker from 66.77.88.99 port 12345 ssh2
+Feb 28 09:45:35 server01 sshd[13690]: Failed password for invalid user kubernetes from 66.77.88.99 port 12346 ssh2
+Feb 28 09:45:37 server01 sshd[13690]: Failed password for invalid user k8s from 66.77.88.99 port 12347 ssh2
+Feb 28 09:45:39 server01 sshd[13690]: Failed password for invalid user hadoop from 66.77.88.99 port 12348 ssh2
+Feb 28 09:45:41 server01 sshd[13690]: Failed password for invalid user spark from 66.77.88.99 port 12349 ssh2
+Feb 28 09:45:43 server01 sshd[13690]: Failed password for invalid user flink from 66.77.88.99 port 12350 ssh2
+Feb 28 09:50:17 server01 sshd[13799]: Accepted password for henry from 127.0.0.1 port 45678 ssh2
+Feb 28 09:55:02 server01 CRON[13855]: pam_unix(cron:session): session opened for user backup by (uid=0)
+Feb 28 09:55:02 server01 CRON[13855]: pam_unix(cron:session): session closed for user backup
+Feb 28 10:00:44 server01 sshd[13922]: Failed password for johndoe from 192.168.1.10 port 58901 ssh2
+Feb 28 10:00:47 server01 sshd[13922]: Failed password for johndoe from 192.168.1.10 port 58902 ssh2
+Feb 28 10:05:10 server01 sshd[14001]: Failed password for root from 203.0.113.20 port 39987 ssh2
+Feb 28 10:05:12 server01 sshd[14001]: Failed password for root from 203.0.113.20 port 39988 ssh2
+Feb 28 10:10:33 server01 sshd[14090]: Accepted password for ivy from 172.16.10.10 port 36728 ssh2
+Feb 28 10:15:44 server01 sshd[14166]: Failed password for invalid user elastic from 45.67.89.12 port 47891 ssh2
+Feb 28 10:15:46 server01 sshd[14166]: Failed password for invalid user kibana from 45.67.89.12 port 47892 ssh2
+Feb 28 10:20:11 server01 sshd[14233]: Failed password for invalid user logstash from 111.22.33.44 port 55234 ssh2
+Feb 28 10:25:29 server01 sshd[14305]: Failed password for invalid user prometheus from 99.88.77.66 port 22456 ssh2
+Feb 28 10:30:55 server01 sshd[14388]: Failed password for invalid user grafana from 150.10.10.1 port 66789 ssh2
+Feb 28 10:35:40 server01 sudo: henry : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/reboot
+Feb 28 10:35:40 server01 sudo: pam_unix(sudo:session): session opened for user root by henry(uid=0)
+Feb 28 10:36:01 server01 systemd: Stopping SSH service...
+Feb 28 10:36:05 server01 sshd[14450]: Received signal 15; terminating.
