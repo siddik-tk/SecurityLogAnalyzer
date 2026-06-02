@@ -14,7 +14,9 @@ void LogAnalyzer::readlogfile(const string& filename){
         while(getline(logfile,line)){
             smatch match;
             if(regex_search(line, match, pattern)){
-                cout << "[INFO] " << match[1] << " login attempt from IP: " << match[2] << endl;
+                cout << "status: "<< match[1]<<endl;
+                cout << "IP: "<< match[2]<<endl;
+                cout << "-----------------------------" << endl;
             }
         }
     }
