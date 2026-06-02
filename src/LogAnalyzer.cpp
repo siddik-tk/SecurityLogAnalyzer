@@ -13,6 +13,6 @@ void LogAnalyzer::readlogfile(const string& filename){
         }
     }
     else{
-        cout << "[ERROR] file failed to open"<< endl;
+        cout << "[ERROR] file failed to open" << filename << endl;
     }
 }
