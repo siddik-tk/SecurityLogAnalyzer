@@ -37,19 +37,19 @@ void LogAnalyzer::showFailedIPs(){
 
 void LogAnalyzer::detectsuspiciousIPs(){
     cout << "\n\nSuspicious IPs" << endl;
+    ofstream outfile("./logs/suspicious.log");
     for(auto& ippair : failedIps){
         if(ippair.second >= THRESHOLD){
             cout << "[suspicious] "<<endl;
             cout << ippair.first << "   ->   " << ippair.second << "attempt(s)" << endl;
-            ofstream outfile("./logs/suspicious.log");
             if(outfile.is_open()){
                 outfile << ippair.first << "   ->   " << ippair.second << "attempt(s)" << endl;
-                outfile.close();
             }
             else{
                 cout << "[ERROR] file failed to open" << endl;
             }
         }
     }
+    outfile.close();
 }
 
