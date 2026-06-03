@@ -5,6 +5,8 @@
 #include <regex>
 using namespace std;
 
+const int THRESHOLD = 3;
+
 void LogAnalyzer::readlogfile(const string& filename){
 
     ifstream logfile(filename);
@@ -29,5 +31,16 @@ void LogAnalyzer::showFailedIPs(){
     cout << "Failed IPs" << endl;
     for(auto& ippair : LogAnalyzer::failedIps){
         cout << ippair.first << "->" << ippair.second << endl;
+    }
+}
+
+void LogAnalyzer::detectsuspiciousIPs(){
+    cout << "Suspicious IPs" << endl;
+    for(auto& ippair : failedIps){
+        if(ippair.second >= THRESHOLD){
+            cout << "[suspicious] "<<endl;
+            cout << ippair.first << "   ->   " << ippair.second << "attempt(s)" << endl;
+            
+        }
     }
 }
