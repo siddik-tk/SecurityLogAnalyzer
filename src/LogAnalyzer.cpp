@@ -25,6 +25,7 @@ void LogAnalyzer::readlogfile(const string& filename){
     else{
         cout << "[ERROR] file failed to open" << filename << endl;
     }
+    logfile.close();
 }
 
 void LogAnalyzer::showFailedIPs(){
@@ -40,7 +41,15 @@ void LogAnalyzer::detectsuspiciousIPs(){
         if(ippair.second >= THRESHOLD){
             cout << "[suspicious] "<<endl;
             cout << ippair.first << "   ->   " << ippair.second << "attempt(s)" << endl;
-            
+            ofstream outfile("./logs/suspicious.log");
+            if(outfile.is_open()){
+                outfile << ippair.first << "   ->   " << ippair.second << "attempt(s)" << endl;
+                outfile.close();
+            }
+            else{
+                cout << "[ERROR] file failed to open" << endl;
+            }
         }
     }
 }
+
