@@ -35,7 +35,7 @@ void LogAnalyzer::showFailedIPs(){
 }
 
 void LogAnalyzer::detectsuspiciousIPs(){
-    cout << "Suspicious IPs" << endl;
+    cout << "\n\nSuspicious IPs" << endl;
     for(auto& ippair : failedIps){
         if(ippair.second >= THRESHOLD){
             cout << "[suspicious] "<<endl;

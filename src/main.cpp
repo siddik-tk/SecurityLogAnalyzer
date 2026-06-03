@@ -7,5 +7,6 @@ int main(){
     LogAnalyzer analyzer;
     analyzer.readlogfile("./logs/auth.log");
     analyzer.showFailedIPs();
+    analyzer.detectsuspiciousIPs();
     return 0;
 }
