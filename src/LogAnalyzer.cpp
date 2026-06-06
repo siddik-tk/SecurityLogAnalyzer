@@ -26,13 +26,16 @@ void LogAnalyzer::readlogfile(const string& filename){
         cout << "[ERROR] file failed to open" << filename << endl;
     }
     logfile.close();
-}
+}   
 
 void LogAnalyzer::showFailedIPs(){
     cout << "Failed IPs" << endl;
+    int totalFailedAttempts = 0;
     for(auto& ippair : LogAnalyzer::failedIps){
+        totalFailedAttempts += ippair.second;
         cout << ippair.first << "->" << ippair.second << endl;
     }
+    cout << "Total failed attempts: " << totalFailedAttempts << endl;
 }
 
 void LogAnalyzer::detectsuspiciousIPs(){
@@ -41,9 +44,9 @@ void LogAnalyzer::detectsuspiciousIPs(){
     for(auto& ippair : failedIps){
         if(ippair.second >= THRESHOLD){
             cout << "[suspicious] "<<endl;
-            cout << ippair.first << "   ->   " << ippair.second << "attempt(s)" << endl;
+            cout << ippair.first << "   ->   " << ippair.second << " attempt(s)" << endl;
             if(outfile.is_open()){
-                outfile << ippair.first << "   ->   " << ippair.second << "attempt(s)" << endl;
+                outfile << ippair.first << "   ->   " << ippair.second << " attempt(s)" << endl;
             }
             else{
                 cout << "[ERROR] file failed to open" << endl;
