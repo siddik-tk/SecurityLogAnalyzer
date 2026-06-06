@@ -10,6 +10,7 @@ public:
     void readlogfile(const string& filename);
     void showFailedIPs();
     void detectsuspiciousIPs();
+    void createReport();
 private:
     unordered_map<string, int> failedIps;
 };

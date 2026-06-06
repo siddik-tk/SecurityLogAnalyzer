@@ -31,21 +31,10 @@ void LogAnalyzer::readlogfile(const string& filename){
 
 void LogAnalyzer::showFailedIPs(){
     cout << "Failed IPs" << endl;
-    int totalFailedAttempts = 0;
     for(auto& ippair : LogAnalyzer::failedIps){
-        totalFailedAttempts += ippair.second;
         cout << ippair.first << "->" << ippair.second << endl;
     }
-    string topIp = "";
-    int maxattempt = 0;
-    for(auto& ippair : failedIps){
-        if (ippair.second > maxattempt){
-            maxattempt = ippair.second;
-            topIp = ippair.first;
-        }
-    }
-    cout << "Total failed attempts: " << totalFailedAttempts << endl;
-    cout << "Top failed IP: " << topIp << " with " << maxattempt << " attempts" << endl;
+
 }
 
 void LogAnalyzer::detectsuspiciousIPs(){
@@ -66,3 +55,35 @@ void LogAnalyzer::detectsuspiciousIPs(){
     outfile.close();
 }
 
+void LogAnalyzer::createReport(){
+    cout << "generating report..."<<endl;
+    ofstream reportfile("./output/report.txt");
+    if(reportfile.is_open()){
+        cout << "[success] Report generated" <<endl;
+        reportfile << "=== Security Summary ===" << endl;
+        int totalFailedAttempts = 0;
+        for(auto& ippair : failedIps){
+            totalFailedAttempts += ippair.second;
+            
+        }
+        reportfile << "Total failed attempts: " << totalFailedAttempts << endl;
+        string topIp = "";
+        int maxattempt = 0;
+
+        for(auto& ippair : failedIps){
+            if (ippair.second > maxattempt){
+                maxattempt = ippair.second;
+                topIp = ippair.first;
+        }
+    }
+    reportfile << "Top Attacker: \n" << topIp << endl;
+    }
+    else{
+        cout << "[ERROR] file failed to open" << endl;
+    }
+
+    reportfile << "suspicious IPs" << endl;
+    for(auto& ippair : LogAnalyzer::failedIps){
+        reportfile << ippair.first << "->" << ippair.second << endl;
+    }
+}
