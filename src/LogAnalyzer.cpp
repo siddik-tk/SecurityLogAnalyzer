@@ -6,6 +6,7 @@
 using namespace std;
 
 const int THRESHOLD = 3;
+int topIp = 0;
 
 void LogAnalyzer::readlogfile(const string& filename){
 
@@ -35,7 +36,16 @@ void LogAnalyzer::showFailedIPs(){
         totalFailedAttempts += ippair.second;
         cout << ippair.first << "->" << ippair.second << endl;
     }
+    string topIp = "";
+    int maxattempt = 0;
+    for(auto& ippair : failedIps){
+        if (ippair.second > maxattempt){
+            maxattempt = ippair.second;
+            topIp = ippair.first;
+        }
+    }
     cout << "Total failed attempts: " << totalFailedAttempts << endl;
+    cout << "Top failed IP: " << topIp << " with " << maxattempt << " attempts" << endl;
 }
 
 void LogAnalyzer::detectsuspiciousIPs(){
